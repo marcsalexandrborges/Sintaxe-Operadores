@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Mensagem na Tela</title>
+</head>
+<body>
+
+<!-- Elemento onde exibiremos a mensagem -->
+<p id="mensagem"></p>
+
+<script>
+function verificarNumeros(num1, num2) {
+    var soma = num1 + num2;
+    var saoIguais = num1 === num2;
+    var mensagem = "";
+
+    if (saoIguais) {
+        mensagem = `Os números ${num1} e ${num2} são iguais.`;
+    } else {
+        mensagem = `Os números ${num1} e ${num2} não são iguais. `;
+    }
+
+    if (soma > 10) {
+        mensagem += `Sua soma é ${soma}, que é maior que 10 `;
+    } else if (soma < 20) {
+        mensagem += `Sua soma é ${soma}, que é menor que 20 `;
+    } else {
+        mensagem += `Sua soma é ${soma}, que é maior que 10 e maior que 20 `;
+    }
+
+    // Atualizar o conteúdo do elemento com id "mensagem"
+    document.getElementById("mensagem").textContent = mensagem;
+}
+
+// Exemplo de uso da função
+verificarNumeros(5, 7);
+</script>
+
+</body>
+</html>
+
